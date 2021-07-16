@@ -1,0 +1,75 @@
+.container {
+    text-align: center;
+    /* border: 1px solid black; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* overflow: hidden; */
+}
+
+.background {
+    position: relative;
+    width: 800px;
+    height: 440px;
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.8);
+    animation-name: fade;
+    animation-duration: 3s;
+    transition: 770ms cubic-bezier(0.51, 0.04, 0.12, 0.99);
+}
+
+img {
+    transition: 770ms cubic-bezier(0.51, 0.04, 0.12, 0.99);
+}
+
+.h1 {
+    font-size: 40px;
+    color: antiquewhite;
+    position: absolute;
+    letter-spacing: 10px;
+    cursor: pointer;
+    text-shadow: 0px 2px 50px rgba(0, 0, 0, 0.8);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0%;
+    animation-name: fade2;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    transition: 770ms cubic-bezier(0.51, 0.04, 0.12, 0.99);
+}
+
+@keyframes fade {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+@keyframes fade2 {
+    0% {opacity: 0%;}
+    100% {opacity: 100%; color: rgb(231, 193, 143);}
+    
+}
+
+.footer {
+    padding-top: 20px;
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+.open .h1  {
+    transform: translate(-80%, -50%);
+    
+}
+
+.open .background img {
+    transform: translate(-20%, 0%);
+    
+}
+
+
+/* .open .background .h1 {
+    transform: translate(-100px);
+} */
