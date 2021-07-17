@@ -1,9 +1,10 @@
 * {
     box-sizing: border-box;
+    /* transition: 770ms cubic-bezier(0.51, 0.04, 0.12, 0.99); */
 }
 
 body {
-    margin: 20px;
+    margin: 0;
 }
 
 .sec1-container {
@@ -46,7 +47,7 @@ img {
     opacity: 0%;
     animation-name: fade2;
     animation-duration: 3s;
-    animation-delay: 2s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
     transition: 770ms cubic-bezier(0.51, 0.04, 0.12, 0.99);
 }
@@ -77,7 +78,7 @@ img {
     
 }
 
-.info-container {
+.contact-container {
     /* border: 1px solid black; */
     padding-top: 20px;
     box-sizing: border-box;
@@ -95,7 +96,7 @@ img {
     transition: 770ms cubic-bezier(0.51, 0.04, 0.12, 0.99);
 }
 
-.info-header {
+.contact-header {
     font-size: 26px;
     /* padding: 20px; */
     padding-bottom: 30px;
@@ -103,6 +104,7 @@ img {
 }
 
 .contact {
+    font-size: 16px;
     padding-bottom: 20px;
     cursor: pointer;
     letter-spacing: 2px;
@@ -113,7 +115,7 @@ a {
     color: black;
 }
 
-.open .info-container  {
+.open .contact-container  {
     transform: translate(0%, 0%);
     
 }
@@ -127,16 +129,18 @@ a {
 .sec-two {
     background-color:rgb(252, 246, 239);
     box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.5);
-    height: 220vh;
+    height: 100%;
     padding: 50px;
     margin-top: 40px;
+    margin: 20px;
 }
 
 .sec2-h1 {
     font-size: 30px;
     padding-bottom: 30px;
-    letter-spacing: 4px;
+    letter-spacing: 20px;
     text-align: center;
+    border-bottom: 1px solid black;
 }
 
 .row {
@@ -158,12 +162,61 @@ a {
     width: 100%;
   }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
+.about-section {
+    background-color:rgb(252, 246, 239);
+    /* box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.5); */
+    height: 100%;
+    padding: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    /* display: flex; */
+  }
+
+.left-container {
+    padding: 20px;
+    font-size: 26px;
+    letter-spacing: 4px;
+    border-bottom: 1px solid black;
+  }
+
+.right-container {
+    padding: 40px;
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .info-column {
+    float: left;
+    width: 33.33%;
+    /* border: 1px solid black; */
+  }
+
+
+
+  /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
     .column {
       flex: 50%;
       max-width: 50%;
     }
+
+    .sec1-background {
+        width: 600px;
+    }
+
+    .sec1-h1 {
+        font-size: 35px;
+    }
+
+    .open .sec1-h1  {
+        transform: translate(-93%, -50%);
+    }
+
+    
   }
   
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -171,5 +224,44 @@ a {
     .column {
       flex: 100%;
       max-width: 100%;
+    }
+
+    .sec1-background {
+        width: 450px;
+    }
+
+    .sec1-h1 {
+        font-size: 35px;
+    }
+
+    .open .sec1-h1  {
+        transform: translate(-95%, -50%);
+    }
+
+    .contact-header {
+        font-size: 20px;
+        /* letter-spacing: 1px; */
+    }
+
+    .contact {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .contact-container {
+        width: 210px;
+        
+    }
+
+    .right-container {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+    }
+    
+    .info-column {
+    float: left;
+    width: 33.33%;
+    border: 1px solid black;
     }
   }
