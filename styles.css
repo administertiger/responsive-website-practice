@@ -195,6 +195,11 @@ a {
     /* border: 1px solid black; */
   }
 
+  #info-middle {
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+  }
+
 
 
   /* Responsive layout - makes a two column-layout instead of four columns */
@@ -216,6 +221,9 @@ a {
         transform: translate(-93%, -50%);
     }
 
+    .info-column {
+        padding: 30px;
+      }
     
   }
   
@@ -257,11 +265,19 @@ a {
         display: flex;
         flex-direction: column;
         /* justify-content: center; */
+        align-items: center;
     }
     
     .info-column {
-    float: left;
-    width: 33.33%;
-    border: 1px solid black;
+        float: none;
+        width: 100%;
+        border-bottom: 1px solid black;
+        text-align: left;
+        padding: 10px;
+    }
+
+    #info-middle {
+        border-left: 0 ;
+        border-right: 0;
     }
   }
